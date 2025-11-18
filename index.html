@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+        
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            text-align: center;
+            position: relative;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+
+            
+        }
+
+      img {
+            height: 200px;
+            border-radius: 100px;
+        }
+
+        nav {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 100px;
+            color: #555;
+    
+        
+        }
+
+        nav a {
+            color: rgb(8, 8, 8);
+            text-decoration: none;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            transition: color 0.5s ease;
+            font-family: Arial, Helvetica, sans-serif;
+
+        
+        }
+
+        nav a:hover {
+            color: rgb(240, 239, 238);
+            transform: scale(1.1);
+
+        
+        }
+         section {
+      padding: 100px 50px;
+      text-align: center;
+    }
+
+
+    h1 {
+      font-size: 2.2em;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1em;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    /* ========== HOME ========== */
+    #home {
+      height: 50vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      
+                
+      
+    }
+
+    #home h1 {
+      font-size: 3em;
+      margin-bottom: 15px;
+      font-family: 'Times New Roman', Times, serif;
+    
+    }
+
+    #home p {
+      font-size: 1.2em;
+      max-width: 600px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    #about {
+    background: linear-gradient(rgba(153, 146, 146, 0.4), rgba(128, 123, 123, 0.4)), 
+                    url('Magelang,\ Jawa\ Tengah.jpg') center/cover no-repeat;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     height: 70vh;
+     color: #e9e9e9;    
+    }
+
+    .about h1{
+      color: aliceblue;
+    }
+    .about p{
+      color: aliceblue;
+    }
+
+    @media (max-width: 780px){
+      .about{
+        font-size: 12px;
+      }
+      .card{
+        font-size: small;
+      }
+      .grid{
+        font-size: small;
+      }
+      .header img{
+        height: 100px;
+      }
+      .nav{
+        gap: 20px;
+      }
+    }
+
+    /* ========== OBJEK WISATA ========== */
+    #objek-wisata {
+      background-color: #838282;
+      font-family: Arial, Helvetica, sans-serif;
+  
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      color:black;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 50px;
+      margin-bottom: 15px;
+    }
+    #testimoni {
+  padding: 60px 20px;
+  background: #f7f7f7;
+  text-align: center;
+}
+
+#testimoni h2 {
+  margin-bottom: 40px;
+  font-size: 28px;
+}
+
+.testi-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.testi-card {
+  width: 280px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+}
+
+.testi-card p {
+  font-style: italic;
+  color: #555;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.testi-card h4 {
+  margin-top: 15px;
+  color: #333;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.testi-card img {
+  width: 80px;         /* ukuran foto */
+  height: 80px;        /* biar kotak */
+  object-fit: cover;   /* biar nggak gepeng */
+  border-radius: 50%;  /* buat lingkaran */
+  margin-bottom: 15px;
+}
+.testi-card :hover{
+color: black;
+}
+
+
+
+    /* ========== FOOTER ========== */
+    footer {
+      background-color: #0f0f0f;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      font-family: Arial, Helvetica, sans-serif;
+     
+    }
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="magelang.png" alt="Logo Magelang">
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#objek-wisata">Objek Wisata</a>
+            <a href="coment">coment</a>
+            <a href="#footer">Footer</a>
+        </nav>
+    </header>
+ <!-- HOME -->
+  <section id="home">
+    <img src="candi borobudur.jpg" alt="">
+    <h1>Selamat Datang di Magelang</h1>
+    <p>Jelajahi keindahan alam, budaya, dan pesona wisata Magelang yang tiada duanya.</p>
+  </section>
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <h1>Tentang Magelang</h1>
+    <p>
+      Kota Magelang terletak di jantung Pulau Jawa, dikelilingi oleh gunung-gunung indah
+      dan dikenal dengan keramahan warganya. magelang juga di juluki sebagai kota sejuta bunga. Kami hadir untuk memperkenalkan keajaiban Magelang
+      kepada dunia — mulai dari sejarah, kuliner, hingga destinasi wisata terbaik. "Kota Sejuta Bunga" dan "Kota Militer" yang strategis di Jawa Tengah,
+       dikenal dengan keindahan alamnya seperti Gunung Tidar dan kekayaan sejarahnya seperti "Magelang Tempo Doeloe". Kota ini juga merupakan pusat toleransi,
+        kuliner khas (getuk, mangut beong), dan kebudayaan yang kaya. 
+    </p>
+  </section>
+
+  <!-- OBJEK WISATA -->
+  <section id="objek-wisata">
+    <h1>Objek Wisata Populer</h1>
+    <div class="grid">
+      <div class="card">
+        <img src="candi borobudur.jpg" alt="Candi Borobudur">
+        <h3>Candi Borobudur</h3>
+        <p> keajaiban arsitektur dan spiritualitas yang megah, 
+          menawarkan pengalaman wisata yang unik dan mendalam.</p>
+      </div>
+      <div class="card">
+        <img src="gereja ayam.jpg" alt="gereja ayam">
+        <h3>gereja ayam</h3>
+        <p>"Di tengah hijaunya perbukitan Magelang, Gereja Ayam menawarkan pemandangan alam yang indah dan udara segar.
+           Anda bisa menikmati matahari terbit yang spektakuler dari puncaknya".</p>
+      </div>
+      <div class="card">
+        <img src="Silancur Highland Magelang.jpg" alt="silancur highland">
+        <h3>silancur highland</h3>
+        <p>Melihat lautan awan dari ketinggian," "Surga tersembunyi di kaki Gunung Sumbing," atau "Di sini, udara segar adalah obat terbaik untuk jiwa yang lelah." </p>
+        </div>
+        <div class="card">
+        <img src="Nepal Van Java, Magelang.jpg" alt="">
+        <h3>nepal van java</h3>
+        <p>"Menyaksikan matahari terbit dari Nepal van Java sungguh tak terlupakan, seolah berada di negri pegunungan yang ada</p>
+        </div>
+        <div class="card">
+          <img src="Kebun Raya Gunung Tidar 503mdpl.jpg" alt="">
+          <h3>gunung tidar</h3>
+          <p>"Gunung Tidar, sang 'Paku Tanah Jawa', menawarkan kombinasi keindahan alam sejuk dan nilai spiritual yang mendalam,"</p>
+         </div>
+         <div class="card">
+          <img src="gunung sumbing.jpg" alt="">
+          <h3>gunung sumbing</h3>
+          <p> pesona alam yang memukau dan sakral" atau "mendaki gunung ini bukan hanya tentang puncak, tapi tentang perjalanan dan ketangguhan diri".</p>
+        </div>
+        <div class="card">
+          <img src="Ketep Pass_ Harga Tiket Masuk, Lokasi & Penginapan.jpg" alt="">
+           <h3>ketep pass</h3>
+           <p>Menikmati syahdunya kabut di Ketep Pass, seperti berada di antara awan. Sungguh pengalaman yang tak terlupakan!</p>
+        </div>
+        <div class="card">
+          <img src="sungai ello.jpg" alt="">
+          <h3>rafting sungai elo</h3>
+          <p> menawarkan keseruan yang memacu adrenalin namun tetap aman, dengan kombinasi arus yang bersahabat (Grade II-III) dan pemandangan alam pedesaan yang indah.</p>
+
+        </div>
+  </section>
+ <section id="testimoni">
+  <h2>Comentar tentang Magelang</h2>
+
+  <div class="testi-container">
+    <div class="testi-card">
+      <img src="coc season 2.jpg" alt="">
+      <h4>Luthfi Bima Putra</h4>
+      <p>" Magelang memiliki semboyan "Harapan" (Hidup aman, rapi, asri, dan nyaman) danlogan pariwisata "Kota sejuta bunga"</p>
+      
+    </div>
+
+    <div class="testi-card">
+      <img src="rey.jpg" alt="">
+      <h4>Rey Mbayang</h4>
+      <p>"magelang kota yang sangat nyaman, magelang juga di juluki sebagai kota sejuta bunga dan kota militer"</p>
+      
+    </div>
+
+    <div class="testi-card">
+      <img src="hudzaifah.jpg" alt="">
+      <h4>Hudzaifah Aslam Mubarak </h4>
+      <p>"magelang kotanya sangat rapi, banyak wisata, sejuk tempat nya, magelang kota sejuta bunga "</p>
+      
+    </div>
+    <div class="testi-card">
+      <img src="songkang.jpg" alt="">
+      <h4>Songkang</h4>
+      <p>kota magelang dikenal dengan kulinernya, makanan khas nya adalah gethuk, mangut beong</p>
+
+    </div>
+    <div class="testi-card">
+      <img src="caka2.jpg" alt="">
+      <h4>Cakalozzz</h4>
+      <p>pemandangan sangat indah, sejuk udara nya, cocok untuk healing, banyak wisata</p>
+
+    </div>
+    <div class="testi-card">
+      <img src="190424 _ V _ Kim Tae Hyung __ BTS _ Bangtan Sonyeondan _ 방탄소년단.jpg" alt="">
+      <h4>Kim Taehyung</h4>
+      <p>kota magelang sangat bersih, nyaman kotanya, rapi penataan kotanya</p>
+
+    </div>
+  </div>
+</section>
+
+
+ 
+
+  <!-- KONTAK / FOOTER -->
+  <footer id="kontak">
+    <h2>contact us</h2>
+    <p>Email: saniaahsafadhillahsania@gmail.com| Telepon: 085701817945 | IG: @saneahsafaa._</p>
+    <p>&copy; 2025 Magelang Tourism. All Rights Reserved.</p>
+  </footer>
+
+
+</body>
+</html>
+
+
+</body>
+</html>
